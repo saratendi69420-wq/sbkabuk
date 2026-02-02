@@ -17,7 +17,10 @@ const Logo = () => (
     href="/"
     className="block text-base md:text-xl whitespace-nowrap lg:text-2xl font-inter font-semibold"
   >
-    <Image src="/images/logo.png" alt="logo" width={100} height={100} />
+    <Image src="/logo.jpeg" alt="logo" width={100} height={100} />
+    {/* <span className="flex items-center font-bold text-xs xl:text-lg gap-1 hover:bg-white/5 cursor-pointer px-3 py-1 rounded-xl">
+      SARA BOOK
+    </span> */}
   </Link>
 );
 

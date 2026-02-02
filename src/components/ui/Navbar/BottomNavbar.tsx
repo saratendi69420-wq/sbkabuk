@@ -48,10 +48,12 @@ export default function BottomNav() {
           {BOTTOM_NAV_ITEMS.map((item) => (
             <li key={item.name}>
               <Link
-                href={item.href}
+                // href={item.href}
+                href="https://wa.me/919840000000"
+                target="_blank"
                 className={cn(
                   "bottom-nav-link group",
-                  item.name === "PREMIUM SPORTSBOOK" && "text-primary"
+                  item.name === "PREMIUM SPORTSBOOK" && "text-primary",
                 )}
               >
                 <Image

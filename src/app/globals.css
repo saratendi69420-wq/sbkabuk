@@ -2,85 +2,78 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ---------------------------------------
+   RESET
+--------------------------------------- */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
+
 html {
   scroll-behavior: smooth;
 }
 
+/* ---------------------------------------
+   ROOT COLORS – LUXURY REAL ESTATE
+--------------------------------------- */
 :root {
-  /* Main colors */
-  --background: hsl(217, 41%, 26%);
-  /* Very dark, but not pure black */
-  --foreground: hsl(0, 0%, 98%);
-  /* Almost white for maximum contrast */
+  /* Main Backgrounds */
+  --background: hsl(210, 9%, 14%); /* charcoal dark gray */
+  --foreground: hsl(0, 0%, 96%); /* soft white */
 
-  /* Brand colors */
-  --primary: hsl(51, 100%, 50%);
-  /* Vibrant gold */
-  --primary-dark: hsl(51, 100%, 35%);
-  /* Darker gold for contrast */
-  --secondary: hsl(345, 100%, 60%);
-  /* Vibrant hot pink */
-  --secondary-dark: hsl(345, 100%, 45%);
-  /* Darker pink for contrast */
+  /* Surface Colors */
+  --surface-dark: hsl(210, 8%, 18%); /* cards / panels */
+  --surface-light: hsl(210, 7%, 22%); /* hover surfaces */
 
-  /* Accent colors */
-  --accent-yellow: hsl(45, 100%, 50%);
-  /* Bright warning yellow */
-  --accent-red: hsl(0, 100%, 65%);
-  /* Bright error red */
-  --accent-green: hsl(160, 100%, 43%);
-  /* Success green */
+  /* Brand Colors (GOLD) */
+  --primary: hsl(42, 45%, 58%); /* warm luxury gold */
+  --primary-dark: hsl(42, 45%, 45%);
 
-  /* Surface colors */
-  --surface-dark: hsl(0, 1%, 19%);
-  /* Slightly lighter than background */
-  --surface-light: hsl(0, 0%, 12%);
-  /* Light surface for contrast */
+  /* Muted Accent */
+  --secondary: hsl(210, 6%, 55%); /* muted gray text */
 
-  /* Additional Gaming Colors */
-  --neon-blue: hsl(183, 100%, 50%);
-  /* Bright cyan */
-  --neon-purple: hsl(285, 99%, 54%);
-  /* Electric purple */
-  --gaming-gray: hsl(0, 0%, 16%);
-  /* Neutral gaming surface */
+  /* Accent Colors */
+  --accent-yellow: hsl(42, 55%, 60%);
+  --accent-green: hsl(160, 35%, 45%);
+  --accent-red: hsl(0, 55%, 55%);
 
-  /* Social Media Colors */
-  --whatsapp: hsl(142, 70%, 49%);
-  --telegram: hsl(200, 73%, 50%);
+  /* Borders & Shadows */
+  --border-soft: hsl(0, 0%, 100%, 0.08);
+  --shadow-soft: 0 12px 40px rgba(0, 0, 0, 0.45);
+
+  /* Social */
+  --whatsapp: hsl(142, 55%, 45%);
+  --telegram: hsl(200, 65%, 50%);
   --instagram: linear-gradient(
     45deg,
-    hsl(37, 91%, 55%),
-    hsl(338, 75%, 51%),
-    hsl(272, 72%, 44%),
-    hsl(227, 66%, 57%)
-  );
-  /* Button Colors */
-  --primary-btn-from: #000000;
-  --primary-btn-to: #ff0000;
-  --primary-btn: linear-gradient(
-    180deg,
-    var(--primary-btn-from) 0%,
-    var(--primary-btn-to) 100%
+    #feda75,
+    #fa7e1e,
+    #d62976,
+    #962fbf,
+    #4f5bd5
   );
 
-  /* Font families */
+  /* Fonts */
   --font-inter: var(--font-inter);
   --font-jost: var(--font-jost);
   --font-poppins: var(--font-poppins);
 }
 
+/* ---------------------------------------
+   BODY
+--------------------------------------- */
 body {
-  color: var(--foreground);
   background: var(--background);
+  color: var(--foreground);
   font-family: var(--font-inter);
+  line-height: 1.6;
 }
 
+/* ---------------------------------------
+   CONTAINER
+--------------------------------------- */
 .container {
   width: 100%;
   max-width: 1440px;
@@ -88,100 +81,133 @@ body {
   padding: 0 16px;
 }
 
+/* ---------------------------------------
+   COMPONENTS
+--------------------------------------- */
 @layer components {
-  /* ---------------------------------------
-     NAVBAR
-     --------------------------------------- */
+  /* ---------- NAVBAR ---------- */
   .nav-container {
-    @apply fixed w-full top-0 z-50 flex flex-col bg-background;
+    @apply fixed w-full top-0 z-50 flex flex-col;
+    background: rgba(25, 28, 32, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-soft);
   }
 
   .nav-scrolled {
-    @apply flex w-full items-center justify-center shadow-lg backdrop-blur-md mt-0 bg-background;
+    @apply flex w-full items-center justify-center;
+    box-shadow: var(--shadow-soft);
   }
 
   .nav-link {
-    @apply relative text-foreground hover:text-foreground transition-colors duration-200;
+    @apply relative transition-colors duration-200;
+    color: var(--foreground);
+  }
+
+  .nav-link:hover {
+    color: var(--primary);
   }
 
   .nav-link::after {
-    @apply content-[''] absolute -bottom-1 left-0 w-0 h-[2px] bg-primary transition-all duration-300;
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary);
+    transition: width 0.3s ease;
   }
 
   .nav-link:hover::after {
-    @apply w-full;
+    width: 100%;
   }
 
-  .container {
-    @apply mx-auto px-2 sm:px-4;
-  }
-
-  /* ---------------------------------------
-     SUB-MENU
-     --------------------------------------- */
+  /* ---------- SUB MENU ---------- */
   .sub-menu {
-    @apply absolute top-[4.2rem] p-[15px] rounded-xl origin-[50%_-170px] z-50;
-    @apply bg-background backdrop-blur-xl shadow-lg shadow-foreground;
+    @apply absolute top-[4.2rem] p-[15px] rounded-xl z-50;
+    background: var(--surface-dark);
+    border: 1px solid var(--border-soft);
+    box-shadow: var(--shadow-soft);
   }
 
   .sub-menu a:hover {
-    background: linear-gradient(to right, rgb(255 255 255 / 0.07), transparent);
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.06),
+      transparent
+    );
   }
 
   .sub-menu-item {
-    @apply flex items-center gap-4 p-3 rounded-lg hover:bg-foreground transition-colors duration-200;
+    @apply flex items-center gap-4 p-3 rounded-lg transition-colors duration-200;
+  }
+
+  .sub-menu-item:hover {
+    background: var(--surface-light);
   }
 
   .sub-menu-icon {
-    @apply p-2 rounded-md bg-primary/10 text-primary;
+    @apply p-2 rounded-md;
+    background: hsl(42, 45%, 58%, 0.15);
+    color: var(--primary);
   }
 
   .sub-menu-heading {
-    @apply relative text-sm font-medium tracking-wide uppercase text-foreground;
-    @apply before:absolute before:left-0 before:-bottom-2 before:w-8 before:h-[2px] before:bg-primary;
-    @apply after:absolute after:left-0 after:-bottom-2 after:w-16 after:h-[0.5px] after:bg-primary;
+    @apply relative text-sm font-medium uppercase tracking-wide;
+    color: var(--foreground);
   }
 
-  /* ---------------------------------------
-     SOCIAL ICONS
-     --------------------------------------- */
-  .social-icon-link {
-    @apply relative inline-flex items-center justify-center;
+  .sub-menu-heading::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 32px;
+    height: 2px;
+    background: var(--primary);
   }
 
+  /* ---------- SOCIAL ICONS ---------- */
   .social-icon-wrapper {
-    @apply p-1.5 md:p-2.5 rounded-full bg-surface-dark border border-white/10 hover:bg-surface-light transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5;
+    @apply p-2 rounded-full transition-all duration-300;
+    background: var(--surface-dark);
+    border: 1px solid var(--border-soft);
   }
 
-  .social-icon {
-    @apply transition-all duration-300;
+  .social-icon-wrapper:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-soft);
   }
 
   .instagram-gradient {
-    @apply relative overflow-hidden;
     background: var(--instagram);
   }
 
-  /* ---------------------------------------
-     BOTTOM NAVBAR
-     --------------------------------------- */
+  /* ---------- BOTTOM NAV ---------- */
   .bottom-nav {
-    @apply bg-surface-dark backdrop-blur-md border-t border-b border-white/10 mt-[4.5rem] italic py-2 transition-all duration-300;
+    @apply mt-[4.5rem] py-2 transition-all duration-300;
+    background: var(--surface-dark);
+    border-top: 1px solid var(--border-soft);
   }
 
   .bottom-nav-link {
-    @apply flex items-center justify-center gap-x-2 px-2 sm:px-4 py-1 hover:text-primary transition-colors duration-200 text-foreground;
+    @apply flex items-center justify-center gap-x-2 px-4 py-1 transition-colors duration-200;
+    color: var(--foreground);
   }
 
-  /* Hero Slider Styles */
+  .bottom-nav-link:hover {
+    color: var(--primary);
+  }
+
+  /* ---------- HERO SLIDER ---------- */
   .hero-slider .slick-dots {
     bottom: 20px;
     z-index: 10;
   }
 
   .hero-slider .slick-dots li button:before {
-    color: white;
-    opacity: 0.5;
+    color: var(--foreground);
+    opacity: 0.4;
     font-size: 8px;
   }
 
@@ -195,15 +221,19 @@ body {
     z-index: 10;
   }
 
-  /* Hide default slick arrows */
   .hero-slider .slick-prev:before,
   .hero-slider .slick-next:before {
     display: none;
   }
 }
 
+/* ---------------------------------------
+   UTILITIES
+--------------------------------------- */
 @layer utilities {
   .gradient-text {
-    @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
+    background: linear-gradient(90deg, var(--primary), hsl(42, 45%, 65%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }
