@@ -41,8 +41,8 @@ const HowToPlay = () => {
     <section className="py-20 px-4 bg-surface-dark relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 left-0 w-72 h-72 bg-primary rounded-full blur-[100px]" />
-        <div className="absolute bottom-0 right-0 w-72 h-72 bg-secondary rounded-full blur-[100px]" />
+        <div className="absolute top-0 left-0 w-72 h-72 bg-black rounded-full blur-[100px]" />
+        <div className="absolute bottom-0 right-0 w-72 h-72 bg-black rounded-full blur-[100px]" />
       </div>
 
       <div className="container relative z-10">
@@ -110,7 +110,7 @@ const HowToPlay = () => {
         </div>
 
         <div className="mt-16 text-center">
-          <Link href="https://wa.me/919310759871" target="_blank" passHref>
+          <Link href="https://wa.me/917357796945" target="_blank" passHref>
             <Button
               variant="primary"
               size="xl"

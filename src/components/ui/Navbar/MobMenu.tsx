@@ -77,14 +77,14 @@ export default function MobMenu({ Menus, onLinkClick }: MobMenuProps) {
       Menus.map((menu) => ({
         ...menu,
         subMenu: menu.subMenu?.filter((item) =>
-          item.name.toLowerCase().includes(debouncedQuery.toLowerCase())
+          item.name.toLowerCase().includes(debouncedQuery.toLowerCase()),
         ),
       })).filter(
         (menu) =>
           menu.name.toLowerCase().includes(debouncedQuery.toLowerCase()) ||
-          (menu.subMenu && menu.subMenu.length > 0)
+          (menu.subMenu && menu.subMenu.length > 0),
       ),
-    [Menus, debouncedQuery]
+    [Menus, debouncedQuery],
   );
 
   const handleMenuItemClick = () => {
@@ -106,7 +106,7 @@ export default function MobMenu({ Menus, onLinkClick }: MobMenuProps) {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="fixed inset-0 top-16 bg-background/95 backdrop-blur-md z-50"
+            className="fixed inset-0 top-16 bg-black backdrop-blur-md z-50"
             {...menuAnimation}
           >
             <div className="h-full flex flex-col">
@@ -136,7 +136,7 @@ export default function MobMenu({ Menus, onLinkClick }: MobMenuProps) {
                         key={menu.name}
                         className={cn(
                           "rounded-lg overflow-hidden border border-transparent",
-                          isClicked && "border-border/10 bg-white/[0.02]"
+                          isClicked && "border-border/10 bg-white/[0.02]",
                         )}
                       >
                         {menu.href && !hasSubMenu ? (
@@ -157,7 +157,7 @@ export default function MobMenu({ Menus, onLinkClick }: MobMenuProps) {
                               setClicked(isClicked ? null : i);
                               onLinkClick(
                                 e as unknown as React.MouseEvent<HTMLAnchorElement>,
-                                menu.href || "#"
+                                menu.href || "#",
                               );
                             }}
                             aria-expanded={isClicked}
@@ -167,7 +167,7 @@ export default function MobMenu({ Menus, onLinkClick }: MobMenuProps) {
                               <ChevronDown
                                 className={cn(
                                   "h-4 w-4 transition-transform duration-200",
-                                  isClicked && "rotate-180"
+                                  isClicked && "rotate-180",
                                 )}
                               />
                             )}

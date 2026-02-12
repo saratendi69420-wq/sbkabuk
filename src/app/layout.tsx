@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/ui/Navbar/Navbar";
 import BottomNav from "@/components/ui/Navbar/BottomNavbar";
 import Footer from "@/components/ui/Footer";
+import WhatsAppFloat from "@/components/ui/WhatsAppFloat";
 import MovingCards from "@/components/Home/MovingCards";
 const inter = Inter({
   variable: "--font-inter",
@@ -43,6 +44,7 @@ export default function RootLayout({
         </div>
         <main className="pt-32 min-h-[calc(100vh-80px)]">{children}</main>
         <Footer />
+        <WhatsAppFloat />
       </body>
     </html>
   );

@@ -237,3 +237,8 @@ body {
     -webkit-text-fill-color: transparent;
   }
 }
+
+/* Force all <section> backgrounds to black */
+section {
+  background-color: #000 !important;
+}

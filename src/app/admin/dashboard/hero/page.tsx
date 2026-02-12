@@ -17,7 +17,7 @@ export default function HeroManagement() {
   const [slides, setSlides] = useState<HeroSlideWithId[]>([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [editingSlide, setEditingSlide] = useState<HeroSlideWithId | null>(
-    null
+    null,
   );
   const [isLoading, setIsLoading] = useState(true);
 
@@ -60,7 +60,7 @@ export default function HeroManagement() {
       setIsModalOpen(false);
     } catch (error) {
       toast.error(
-        error instanceof Error ? error.message : "Failed to create slide"
+        error instanceof Error ? error.message : "Failed to create slide",
       );
     }
   };
@@ -87,8 +87,8 @@ export default function HeroManagement() {
         prevSlides.map((slide) =>
           slide._id === editingSlide._id
             ? { ...data, _id: editingSlide._id }
-            : slide
-        )
+            : slide,
+        ),
       );
 
       toast.success("Slide updated successfully");
@@ -97,7 +97,7 @@ export default function HeroManagement() {
     } catch (error) {
       console.error("Update error:", error);
       toast.error(
-        error instanceof Error ? error.message : "Failed to update slide"
+        error instanceof Error ? error.message : "Failed to update slide",
       );
     }
   };
@@ -119,7 +119,7 @@ export default function HeroManagement() {
     } catch (error: unknown) {
       console.error("Delete error:", error);
       toast.error(
-        error instanceof Error ? error.message : "Failed to delete slide"
+        error instanceof Error ? error.message : "Failed to delete slide",
       );
       // Refetch slides in case of error to ensure UI consistency
       fetchSlides();
@@ -157,7 +157,7 @@ export default function HeroManagement() {
         {slides.map((slide) => (
           <div
             key={slide._id}
-            className="bg-surface-dark border border-white/10 rounded-lg overflow-hidden 
+            className="bg-black border border-white/10 rounded-lg overflow-hidden 
                      transition-all duration-200 hover:shadow-lg hover:border-primary/20"
           >
             <div className="relative h-48">
@@ -183,7 +183,7 @@ export default function HeroManagement() {
                     setEditingSlide(slide);
                     setIsModalOpen(true);
                   }}
-                  className="hover:bg-surface-light"
+                  className="hover:bg-black/20"
                 >
                   <Pencil className="w-4 h-4" />
                 </Button>

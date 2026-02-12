@@ -5,7 +5,7 @@ export default function GetID() {
   return (
     <section className="relative py-16 md:py-24">
       {/* Background with gradient overlay */}
-      <div className="absolute inset-0 bg-surface-dark/90 z-0" />
+      <div className="absolute inset-0 bg-black  z-0" />
 
       {/* Main content */}
       <div className="container relative z-10">
@@ -41,7 +41,7 @@ export default function GetID() {
             . Join thousands of satisfied users who trust our professional
             services.
           </p>
-          <Link href="https://wa.me/919840000000" passHref>
+          <Link href="https://wa.me/917357796945" passHref>
             <Button
               variant="primary"
               size="xl"

@@ -20,7 +20,7 @@ const PrevArrow = ({ onClick }: { onClick?: () => void }) => (
 const NextArrow = ({ onClick }: { onClick?: () => void }) => (
   <button
     onClick={onClick}
-    className="absolute right-4 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full bg-black/50 
+    className="absolute right-4 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full bg-black 
       hover:bg-black/75 transition-all duration-200 group"
   >
     <HiOutlineChevronRight className="w-6 h-6 text-white group-hover:scale-110 transition-transform" />

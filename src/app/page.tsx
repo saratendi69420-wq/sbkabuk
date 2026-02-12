@@ -13,7 +13,7 @@ export default function Home() {
       <WhyJoinUs />
       <Partner />
       <HowToPlay />
-      <InstagramPost />
+      {/* <InstagramPost /> */}
       <FAQ />
     </div>
   );

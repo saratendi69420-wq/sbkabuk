@@ -36,7 +36,7 @@ html {
   --accent-green: hsl(160, 100%, 43%);
   /* Success green */
 
-  /* Surface colors */
+  /* black colors */
   --surface-dark: hsl(0, 1%, 19%);
   /* Slightly lighter than background */
   --surface-light: hsl(0, 0%, 12%);
@@ -93,11 +93,11 @@ body {
      NAVBAR
      --------------------------------------- */
   .nav-container {
-    @apply fixed w-full top-0 z-50 flex flex-col bg-background;
+    @apply fixed w-full top-0 z-50 flex flex-col bg-black;
   }
 
   .nav-scrolled {
-    @apply flex w-full items-center justify-center shadow-lg backdrop-blur-md mt-0 bg-background;
+    @apply flex w-full items-center justify-center shadow-lg backdrop-blur-md mt-0 bg-black;
   }
 
   .nav-link {
@@ -121,7 +121,7 @@ body {
      --------------------------------------- */
   .sub-menu {
     @apply absolute top-[4.2rem] p-[15px] rounded-xl origin-[50%_-170px] z-50;
-    @apply bg-background backdrop-blur-xl shadow-lg shadow-foreground;
+    @apply bg-black backdrop-blur-xl shadow-lg shadow-foreground;
   }
 
   .sub-menu a:hover {
@@ -150,7 +150,7 @@ body {
   }
 
   .social-icon-wrapper {
-    @apply p-1.5 md:p-2.5 rounded-full bg-surface-dark border border-white/10 hover:bg-surface-light transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5;
+    @apply p-1.5 md:p-2.5 rounded-full bg-black border border-white/10 hover:bg-black transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5;
   }
 
   .social-icon {
@@ -166,7 +166,7 @@ body {
      BOTTOM NAVBAR
      --------------------------------------- */
   .bottom-nav {
-    @apply bg-surface-dark backdrop-blur-md border-t border-b border-white/10 mt-[4.5rem] italic py-2 transition-all duration-300;
+    @apply bg-black backdrop-blur-md border-t border-b border-white/10 mt-[4.5rem] italic py-2 transition-all duration-300;
   }
 
   .bottom-nav-link {
@@ -206,4 +206,9 @@ body {
   .gradient-text {
     @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
   }
+}
+
+/* Force all <section> backgrounds to black */
+section {
+  background-color: #000 !important;
 }

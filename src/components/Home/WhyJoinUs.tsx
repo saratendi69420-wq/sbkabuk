@@ -97,8 +97,8 @@ export default function WhyJoinUs() {
   };
 
   return (
-    <section className="text-foreground py-10 px-4 sm:px-6 lg:px-8 relative bg-surface-dark">
-      <div className="absolute inset-0 bg-gradient-to-bl from-neon-purple/10 to-neon-blue/10">
+    <section className="text-foreground py-10 px-4 sm:px-6 lg:px-8 relative bg-black">
+      <div className="absolute inset-0 bg-black">
         <svg
           className="absolute inset-0 w-full h-full"
           xmlns="http://www.w3.org/2000/svg"

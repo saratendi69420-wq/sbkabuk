@@ -49,7 +49,7 @@ export default function BottomNav() {
             <li key={item.name}>
               <Link
                 // href={item.href}
-                href="https://wa.me/919840000000"
+                href="https://wa.me/917357796945"
                 target="_blank"
                 className={cn(
                   "bottom-nav-link group",

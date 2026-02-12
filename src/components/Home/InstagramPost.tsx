@@ -28,7 +28,7 @@ const instagramPosts: InstagramPost[] = [
       "Match predictions for today's IPL game! 🏏 #CricketBetting #IPL2023",
     likes: 245,
     comments: 32,
-    postUrl: "https://www.instagram.com/yatri_book",
+    postUrl: "https://www.instagram.com/sarabookoffical",
     date: "2h ago",
   },
   {
@@ -38,7 +38,7 @@ const instagramPosts: InstagramPost[] = [
       "Our expert analysis was spot on! Check out today's winning tips 💰 #BettingTips",
     likes: 189,
     comments: 24,
-    postUrl: "https://www.instagram.com/yatri_book",
+    postUrl: "https://www.instagram.com/sarabookoffical",
     date: "5h ago",
   },
   {
@@ -48,7 +48,7 @@ const instagramPosts: InstagramPost[] = [
       "Last minute odds update for the T20 World Cup! 🌍 #T20WorldCup #CricketOdds",
     likes: 312,
     comments: 45,
-    postUrl: "https://www.instagram.com/yatri_book",
+    postUrl: "https://www.instagram.com/sarabookoffical",
     date: "8h ago",
   },
   {
@@ -58,7 +58,7 @@ const instagramPosts: InstagramPost[] = [
       "Weekend special: Double your winnings on selected matches! 💯 #SpecialOffer",
     likes: 421,
     comments: 67,
-    postUrl: "https://www.instagram.com/yatri_book",
+    postUrl: "https://www.instagram.com/sarabookoffical",
     date: "1d ago",
   },
 ];
@@ -165,7 +165,7 @@ export default function InstagramPost() {
             </p>
           </div>
           <Link
-            href="https://www.instagram.com/yatri_book"
+            href="https://www.instagram.com/sarabookoffical"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 px-4 py-2 rounded-full bg-surface-dark hover:bg-surface-light border border-primary/20 transition-all duration-300"
@@ -237,7 +237,7 @@ export default function InstagramPost() {
 
         <div className="mt-8 text-center">
           <Link
-            href="https://www.instagram.com/yatri_book"
+            href="https://www.instagram.com/sarabookoffical"
             target="_blank"
             rel="noopener noreferrer"
             className="instagram-gradient inline-flex items-center justify-center px-8 py-3 text-foreground font-medium rounded-full hover:opacity-90 transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5"

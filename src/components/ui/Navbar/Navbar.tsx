@@ -105,7 +105,7 @@ export default function Navbar() {
     <motion.header
       className={cn(
         "nav-container",
-        isScrolled ? "nav-scrolled" : "bg-background",
+        isScrolled ? "nav-scrolled" : "bg-black",
         "py-1 transition-transform duration-300 shadow-sm mt-10",
         !isVisible && "-translate-y-full",
       )}
@@ -123,7 +123,7 @@ export default function Navbar() {
             <MobileNavigation />
             <div className="flex items-center gap-x-2 md:gap-x-3">
               <Link
-                href="https://wa.me/919310759871"
+                href="https://wa.me/917357796945"
                 className="social-icon-link group"
                 aria-label="WhatsApp"
               >
@@ -131,7 +131,7 @@ export default function Navbar() {
                   <FaWhatsapp className="social-icon text-whatsapp group-hover:scale-110 size-4 md:size-5" />
                 </div>
               </Link>
-              <Link
+              {/* <Link
                 href="https://t.me/yatribook"
                 className="social-icon-link group"
                 aria-label="Telegram"
@@ -139,9 +139,9 @@ export default function Navbar() {
                 <div className="social-icon-wrapper">
                   <FaTelegram className="social-icon text-telegram group-hover:scale-110 size-4 md:size-5" />
                 </div>
-              </Link>
+              </Link> */}
               <Link
-                href="https://www.instagram.com/yatri_book"
+                href="https://www.instagram.com/sarabookoffical"
                 className="social-icon-link group"
                 aria-label="Instagram"
               >
@@ -150,7 +150,7 @@ export default function Navbar() {
                 </div>
               </Link>
             </div>
-            <Link href="https://wa.me/919310759871" target="_blank" passHref>
+            <Link href="https://wa.me/917357796945" target="_blank" passHref>
               <Button
                 borderRadius="1.75rem"
                 className="bg-primary text-background font-semibold shadow-md"

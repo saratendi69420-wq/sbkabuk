@@ -6,22 +6,22 @@ import { Toaster } from "react-hot-toast";
  * Provides the layout structure for all admin pages with toast notifications
  */
 export default function AdminLayout({
-    children,
+  children,
 }: {
-    children: React.ReactNode;
+  children: React.ReactNode;
 }) {
-    return (
-        <>
-            <div className="flex h-screen bg-background mt-20">
-                {/* Sidebar Navigation */}
-                <Sidebar />
+  return (
+    <>
+      <div className="flex h-screen bg-black mt-20">
+        {/* Sidebar Navigation */}
+        <Sidebar />
 
-                {/* Main Content Area */}
-                <main className="p-4 w-full">{children}</main>
+        {/* Main Content Area */}
+        <main className="p-4 w-full">{children}</main>
 
-                {/* Toast Notifications */}
-                <Toaster position="top-center" reverseOrder={false} />
-            </div>
-        </>
-    );
+        {/* Toast Notifications */}
+        <Toaster position="top-center" reverseOrder={false} />
+      </div>
+    </>
+  );
 }

@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Phone, MessageCircle, Send } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 
 const Footer = () => {
   const bettingSites1 = [
@@ -32,7 +33,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gradient-to-br from-surface-dark via-surface-dark/95 to-surface-dark border-t border-primary/20">
+    <footer className="bg-black">
       {/* 18+ Warning Banner */}
       <div className="bg-gradient-to-r from-accent-red/20 via-accent-red/10 to-accent-red/20 backdrop-blur-sm py-4">
         <div className="container">
@@ -140,20 +141,14 @@ const Footer = () => {
               {[
                 {
                   icon: Phone,
-                  text: "+91-9310764844",
-                  href: "tel:+919310759871",
+                  text: "+91-7357796945",
+                  href: "tel:+917357796945",
                 },
                 {
-                  icon: MessageCircle,
+                  icon: FaWhatsapp,
                   text: "WhatsApp",
-                  href: "https://wa.me/919310759871",
+                  href: "https://wa.me/917357796945",
                   className: "text-whatsapp",
-                },
-                {
-                  icon: Send,
-                  text: "Telegram",
-                  href: "#",
-                  className: "text-telegram",
                 },
               ].map((item) => (
                 <li key={item.text}>

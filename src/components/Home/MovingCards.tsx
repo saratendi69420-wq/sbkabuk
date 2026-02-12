@@ -17,7 +17,7 @@ const bulletPoints = [
 
 export default function MovingCards() {
   return (
-    <div className="bg-background">
+    <div className="bg-black">
       <InfiniteMovingCards
         items={bulletPoints}
         direction="left"
