@@ -1,16 +1,16 @@
 "use client";
 
+import { cn, smoothScrollTo } from "@/lib/utils";
 import { motion } from "framer-motion";
+import { throttle } from "lodash";
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { FaInstagram, FaWhatsapp } from "react-icons/fa";
+import { Button } from "../moving-border";
 import DesktopMenu from "./DesktopMenu";
 import MobMenu from "./MobMenu";
 import { NAVIGATION_MENUS } from "./constants";
-import { throttle } from "lodash";
-import { cn, smoothScrollTo } from "@/lib/utils";
-import { FaWhatsapp, FaInstagram, FaTelegram } from "react-icons/fa";
-import { Button } from "../moving-border";
-import Image from "next/image";
 
 const Logo = () => (
   <Link

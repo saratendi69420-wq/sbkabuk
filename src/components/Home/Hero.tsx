@@ -1,11 +1,11 @@
 "use client";
-import React, { useEffect, useState, useCallback } from "react";
 import Image from "next/image";
-import { IHeroSlide } from "./HeroSlide";
-import Slider from "react-slick";
+import { useCallback, useEffect, useState } from "react";
 import { HiOutlineChevronLeft, HiOutlineChevronRight } from "react-icons/hi2";
-import "slick-carousel/slick/slick.css";
+import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
+import { IHeroSlide } from "./HeroSlide";
 
 const PrevArrow = ({ onClick }: { onClick?: () => void }) => (
   <button

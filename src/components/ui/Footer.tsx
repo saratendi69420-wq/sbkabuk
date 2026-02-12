@@ -1,8 +1,8 @@
 "use client";
 
-import Link from "next/link";
+import { Phone } from "lucide-react";
 import Image from "next/image";
-import { Phone, MessageCircle, Send } from "lucide-react";
+import Link from "next/link";
 import { FaWhatsapp } from "react-icons/fa";
 
 const Footer = () => {
