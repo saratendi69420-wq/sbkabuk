@@ -150,7 +150,7 @@ export default function Navbar() {
                 </div>
               </Link>
             </div>
-            <Link href="https://wa.me/917357796945" target="_blank" passHref>
+            <Link href="https://wa.me/919351385937" target="_blank" passHref>
               <Button
                 borderRadius="1.75rem"
                 className="bg-primary text-background font-semibold shadow-md"
@@ -164,4 +164,5 @@ export default function Navbar() {
     </motion.header>
   );
 }
+
 
