@@ -66,8 +66,9 @@ export const NAVIGATION_MENUS = [
   },
   {
     name: "Contact Us",
-    href: "https://wa.me/917357796945",
+    href: "https://wa.me/919351385937",
   },
 ] as const satisfies MenuItem[];
 
 export type NavigationMenu = (typeof NAVIGATION_MENUS)[number];
+
