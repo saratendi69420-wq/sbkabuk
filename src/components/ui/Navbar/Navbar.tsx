@@ -123,7 +123,7 @@ export default function Navbar() {
             <MobileNavigation />
             <div className="flex items-center gap-x-2 md:gap-x-3">
               <Link
-                href="https://wa.me/917357796945"
+                href="https://wa.me/919351385937"
                 className="social-icon-link group"
                 aria-label="WhatsApp"
               >
@@ -164,3 +164,4 @@ export default function Navbar() {
     </motion.header>
   );
 }
+
