@@ -141,13 +141,13 @@ const Footer = () => {
               {[
                 {
                   icon: Phone,
-                  text: "+91-7357796945",
-                  href: "tel:+917357796945",
+                  text: "+91-9351385937",
+                  href: "tel:+919351385937",
                 },
                 {
                   icon: FaWhatsapp,
                   text: "WhatsApp",
-                  href: "https://wa.me/917357796945",
+                  href: "https://wa.me/919351385937",
                   className: "text-whatsapp",
                 },
               ].map((item) => (
@@ -198,3 +198,4 @@ const Footer = () => {
 };
 
 export default Footer;
+
