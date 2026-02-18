@@ -15,28 +15,28 @@ const partnerData: PartnerCardProps[] = [
     name: "Sky Exchange",
     userId: "SARA Book",
     password: "Sara1234",
-    link: "https://wa.me/917357796945",
+    link: "https://wa.me/919351385937",
   },
   {
     logo: "/images/goexchange.webp",
     name: "Go Exchange",
     userId: "SARA Book",
     password: "Sara1234",
-    link: "https://wa.me/917357796945",
+    link: "https://wa.me/919351385937",
   },
   {
     logo: "/images/my99.jpg",
     name: "My99",
     userId: "SARA Book",
     password: "Sara1234",
-    link: "https://wa.me/917357796945",
+    link: "https://wa.me/919351385937",
   },
   {
     logo: "/images/tigerexch-logo.webp",
     name: "Tigerexch",
     userId: "SARA Book",
     password: "Sara1234",
-    link: "https://wa.me/917357796945",
+    link: "https://wa.me/919351385937",
   },
 ];
 
@@ -158,3 +158,4 @@ export default function Partner() {
     </section>
   );
 }
+
