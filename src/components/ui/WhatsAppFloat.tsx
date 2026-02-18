@@ -5,7 +5,7 @@ import { FaWhatsapp } from "react-icons/fa";
 
 export default function WhatsAppFloat() {
   const waLink =
-    "https://wa.me/917357796945?text=Hi%20I%20want%20to%20get%20an%20ID%20for%20SARA%20Book";
+    "https://wa.me/919351385937?text=Hi%20I%20want%20to%20get%20an%20ID%20for%20SARA%20Book";
 
   return (
     <div className="fixed bottom-6 right-6 z-50">
